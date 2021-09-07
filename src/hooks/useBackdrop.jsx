@@ -8,7 +8,7 @@ export default function useBackdrop(isOpen = false) {
   // SE LLAMA EL CONTREXTO DEL BACKDROP Y SE DESCRUTURAN LOS METODOS DEL PROVIDER
   const { open, close } = useContext(BackdropContext);
 
-  // USAMOS UN EFECTO PARA ABRIR EL BACKDROP SI EL VALOR
+  // USAMOS UN EFECTO PARA ABRIR EL BACKDROP SI EL VALOR;
   // isOpen ES TRUE
   useEffect(() => {
     isOpen && open();
@@ -18,7 +18,7 @@ export default function useBackdrop(isOpen = false) {
   const backdrop = useMemo(
     () => ({
       open,
-      close
+      close,
     }),
     [open, close]
   );
